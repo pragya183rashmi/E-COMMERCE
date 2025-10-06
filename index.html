@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful E-Commerce Catalog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff9ff3, #6c5ce7); /* Pink to Purple gradient */
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      width: 280px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-header {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .category-badge {
+      font-size: 1.2rem;
+      padding: 3px 8px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .category-apparel { background-color: #ff6b6b; }
+    .category-electronics { background-color: #1e90ff; }
+    .category-home { background-color: #32cd32; }
+    .category-accessory { background-color: #ffb347; }
+
+    .price {
+      font-size: 1.5rem;
+      color: #ff4d6d;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .variant-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .variant-list li {
+      background: #f0f8ff;
+      border-radius: 10px;
+      padding: 8px;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+
+    .variant-list li:hover {
+      background: #d1ecf1;
+    }
+
+    .stock-low { color: red; font-weight: bold; }
+    .stock-medium { color: orange; font-weight: bold; }
+    .stock-high { color: green; font-weight: bold; }
+
+    .emoji {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="catalog">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-header">
+        👕 Classic Crewneck T-Shirt
+        <span class="category-badge category-apparel">Apparel</span>
+      </div>
+      <div class="price">$29.99</div>
+      <ul class="variant-list">
+        <li>White / M - <span class="stock-high">Stock: 150 ✅</span></li>
+        <li>Black / L - <span class="stock-medium">Stock: 85 ⚠️</span></li>
+        <li>Navy / S - <span class="stock-high">Stock: 200 ✅</span></li>
+      </ul>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-header">
+        🎧 Noise-Cancelling Headphones
+        <span class="category-badge category-electronics">Electronics</span>
+      </div>
+      <div class="price">$199.99</div>
+      <ul class="variant-list">
+        <li>Space Gray / OS - <span class="stock-medium">Stock: 45 ⚠️</span></li>
+        <li>Silver / OS - <span class="stock-low">Stock: 12 ❌</span></li>
+      </ul>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-header">
+        🏡 Cozy Home Lamp
+        <span class="category-badge category-home">Home Goods</span>
+      </div>
+      <div class="price">$49.99</div>
+      <ul class="variant-list">
+        <li>White / Small - <span class="stock-high">Stock: 120 ✅</span></li>
+        <li>Beige / Medium - <span class="stock-medium">Stock: 60 ⚠️</span></li>
+      </ul>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <div class="product-header">
+        👜 Leather Handbag
+        <span class="category-badge category-accessory">Accessory</span>
+      </div>
+      <div class="price">$89.99</div>
+      <ul class="variant-list">
+        <li>Brown / One Size - <span class="stock-high">Stock: 75 ✅</span></li>
+        <li>Black / One Size - <span class="stock-low">Stock: 10 ❌</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
